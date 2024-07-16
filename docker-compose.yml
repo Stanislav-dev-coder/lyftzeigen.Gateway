@@ -10,10 +10,11 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - backend
+      - shared-network
 
 networks:
-  backend:
+  shared-network:
+    external: true
 
 volumes:
   caddy_data:  
