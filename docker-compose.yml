@@ -23,6 +23,8 @@ services:
       - "27017:27017"
     networks:
       - shared-network
+    depends_on:
+      - mongo
 
 networks:
   shared-network:
