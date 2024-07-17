@@ -16,6 +16,8 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./mongo.crt:/etc/cert/mongo.crt
+      - ./mongo.key:/etc/cert/mongo.key
     ports:
       - "28017:28017"
     networks:
