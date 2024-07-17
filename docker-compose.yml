@@ -17,7 +17,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
-      - "28017:27017"
+      - "28017:28017"
     networks:
       - shared-network
 
