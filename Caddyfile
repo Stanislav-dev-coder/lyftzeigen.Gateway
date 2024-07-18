@@ -1,3 +1,4 @@
 api.lyftzeigen.ru {
     reverse_proxy spring-api:8080
+    reverse_prosy fastapi-app:8081
 }
