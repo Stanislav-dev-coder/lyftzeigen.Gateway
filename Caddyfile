@@ -1,4 +1,11 @@
 api.lyftzeigen.ru {
-    reverse_proxy spring-api:8080
-    reverse_prosy fastapi-app:8081
+    route /spring-api/* {
+        uri strip_prefix /spring-api
+        reverse_proxy spring-api:8080
+    }
+    route /fastapi-app/* {
+        uri strip_prefix /fastapi-app
+        reverse_proxy fastapi-app:8081
+    }
 }
+
